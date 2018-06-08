@@ -2,8 +2,7 @@
 //  AppDelegate.swift
 //  Swilt
 //
-//  Created by Piotr Zaitev on 29/05/2018.
-//  Copyright © 2018 NI Enterprise. All rights reserved.
+//  
 //
 
 import UIKit

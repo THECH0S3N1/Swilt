@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,15 +15,15 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ovo_owl_2-wallpaper-1920x1200" translatesAutoresizingMaskIntoConstraints="NO" id="qfK-bs-vtV">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="-24" width="414" height="794"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nikita Iefymov" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpm-Mv-1oC">
-                                <rect key="frame" x="0.0" y="612.5" width="375" height="20"/>
+                                <rect key="frame" x="0.0" y="681.66666666666663" width="414" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="ZrE-hl-ffa"/>
                                 </constraints>
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oscar Kellner" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfn-T3-KOb">
-                                <rect key="frame" x="0.0" y="592.5" width="375" height="20"/>
+                                <rect key="frame" x="0.0" y="661.66666666666663" width="414" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="RDr-ad-2F3"/>
                                 </constraints>
@@ -40,40 +40,40 @@
                                 <color key="textColor" red="0.16078431369999999" green="0.18823529410000001" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gurharmeet Singh" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZm-3P-vWN">
+                                <rect key="frame" x="0.0" y="701.66666666666663" width="414" height="14.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.16078431369999999" green="0.18823529410000001" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TiltIT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApR-xH-fM3">
-                                <rect key="frame" x="0.0" y="552.5" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="80" width="414" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="6Hl-0R-lpb"/>
+                                    <constraint firstAttribute="height" constant="40" id="ww2-eh-uAr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="41"/>
                                 <color key="textColor" red="0.3843137254901961" green="0.17254901960784313" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gurharmeet Singh" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZm-3P-vWN">
-                                <rect key="frame" x="0.0" y="632.5" width="375" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.16078431369999999" green="0.18823529410000001" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qfK-bs-vtV" secondAttribute="bottom" id="4A7-zy-QqM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qfK-bs-vtV" secondAttribute="bottom" constant="-34" id="4A7-zy-QqM"/>
+                            <constraint firstItem="ApR-xH-fM3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="BcM-DO-DWh"/>
                             <constraint firstItem="qfK-bs-vtV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CYU-M3-iXN"/>
                             <constraint firstItem="zpm-Mv-1oC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CnA-jp-c6J"/>
                             <constraint firstItem="zfn-T3-KOb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GxA-LS-Mjb"/>
                             <constraint firstItem="WZm-3P-vWN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jn7-vl-orb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zfn-T3-KOb" secondAttribute="trailing" id="Lor-Qv-W3c"/>
-                            <constraint firstItem="qfK-bs-vtV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NaR-lT-JJ8"/>
+                            <constraint firstItem="qfK-bs-vtV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="NaR-lT-JJ8"/>
                             <constraint firstItem="WZm-3P-vWN" firstAttribute="top" secondItem="zpm-Mv-1oC" secondAttribute="bottom" id="Udl-5A-rpE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qfK-bs-vtV" secondAttribute="trailing" id="Vdq-tp-9zO"/>
                             <constraint firstItem="zpm-Mv-1oC" firstAttribute="top" secondItem="zfn-T3-KOb" secondAttribute="bottom" id="YxX-D7-oEo"/>
                             <constraint firstItem="WZm-3P-vWN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Z3m-YU-S1E"/>
-                            <constraint firstItem="ApR-xH-fM3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hB6-tG-IIQ"/>
+                            <constraint firstItem="ApR-xH-fM3" firstAttribute="trailing" secondItem="zfn-T3-KOb" secondAttribute="trailing" id="dGy-SK-fZz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WZm-3P-vWN" secondAttribute="bottom" constant="20" id="iha-40-yIf"/>
-                            <constraint firstItem="zfn-T3-KOb" firstAttribute="top" secondItem="ApR-xH-fM3" secondAttribute="bottom" id="qal-Es-m1F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zpm-Mv-1oC" secondAttribute="trailing" id="rkT-gb-5go"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ApR-xH-fM3" secondAttribute="trailing" id="zhv-Ab-fUB"/>
+                            <constraint firstItem="ApR-xH-fM3" firstAttribute="leading" secondItem="zfn-T3-KOb" secondAttribute="leading" id="taX-Ge-di7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -82,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="549.375" y="397.18309859154931"/>
+            <point key="canvasLocation" x="548" y="396.79802955665025"/>
         </scene>
     </scenes>
     <resources>

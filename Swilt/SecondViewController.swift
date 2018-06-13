@@ -14,9 +14,11 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var LargerText: UIButton!
     @IBOutlet weak var SmallerText: UIButton!
     var counter_button_scroll = 1
-    var maxFontSize = 20
+    var maxFontSize = 30
     var minFontSize = 10
-    var f = 14
+    var f = 20
+    var up_timestamp = 0.0
+    var down_timestamp = 0.0
     
     @IBOutlet weak var Tview: UITextView!
     @IBOutlet  weak var Sview: UIScrollView!
@@ -80,23 +82,26 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Tview.isUserInteractionEnabled = false
         Tview.isScrollEnabled = true
         let rec = CGRect(x: 0, y: 0, width: Sview.frame.size.width, height: Sview.frame.size.height)
         
         Sview.scrollRectToVisible(rec, animated: true)
         Tview.contentSize = CGSize(width: Tview.frame.size.width, height: CGFloat(i+50))
-        motionManager.gyroUpdateInterval = 0.3
+        motionManager.gyroUpdateInterval = 0.1
         motionManager.startGyroUpdates(to: OperationQueue.current!){ (data, error) in
-            
-            if let myData = data{
-                if myData.rotationRate.x > 5{
+           
+                if let myData = data{
+                if myData.rotationRate.x > 0.8{
                     self.scrollDown()
                    
-                } else if myData.rotationRate.x < -5{
+                } else if myData.rotationRate.x < -2.7{
                     self.scrollUp()
                     
                 }
-            }
+                }
+                
+            
             
         }
     }
@@ -109,25 +114,34 @@ class SecondViewController: UIViewController {
     }
     
     func scrollDown(){
-        if i < 1650 {
-            i+=150
+        let new_down_timestamp = NSDate().timeIntervalSince1970
+        if (new_down_timestamp - up_timestamp) > 0.8{
+            down_timestamp = new_down_timestamp
+            if i < 1650 {
+                i += 250
+            }
+            
+            let rec = CGRect(x: 0, y: CGFloat(i), width: Tview.frame.size.width, height: Tview.frame.size.height)
+            Tview.scrollRectToVisible(rec, animated: true)
         }
-        let rec = CGRect(x: 0, y: CGFloat(i), width: Tview.frame.size.width, height: Tview.frame.size.height)
-        Tview.scrollRectToVisible(rec, animated: true)
         
-        print(i)
-       
+        
         
     }
     
     
     func scrollUp(){
-        if i > 0{
-            i-=150
+        
+        let new_up_timestamp = NSDate().timeIntervalSince1970
+        if(new_up_timestamp - down_timestamp) > 0.8{
+            up_timestamp = new_up_timestamp
+            if i > 0{
+                i -= 250
+            }
+            let rec = CGRect(x: 0, y: CGFloat(i), width: Tview.frame.size.width, height: Tview.frame.size.height)
+            Tview.scrollRectToVisible(rec, animated: true)
         }
-        let rec = CGRect(x: 0, y: CGFloat(i), width: Tview.frame.size.width, height: Tview.frame.size.height)
-        Tview.scrollRectToVisible(rec, animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {}
+        
         
     }
     

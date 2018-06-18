@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1718B220D6B82900B08743 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1718B120D6B82900B08743 /* File.swift */; };
 		9CA9EA0A20BCC83800F34C79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA9EA0920BCC83800F34C79 /* AppDelegate.swift */; };
 		9CA9EA0E20BCC83800F34C79 /* ReaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA9EA0D20BCC83800F34C79 /* ReaderController.swift */; };
 		9CA9EA1120BCC83800F34C79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA9EA0F20BCC83800F34C79 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C1718B120D6B82900B08743 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		9CA9EA0620BCC83800F34C79 /* Swilt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swilt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA9EA0920BCC83800F34C79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CA9EA0D20BCC83800F34C79 /* ReaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		9CA9EA0820BCC83800F34C79 /* Swilt */ = {
 			isa = PBXGroup;
 			children = (
+				9C1718B120D6B82900B08743 /* File.swift */,
 				9CA9EA0920BCC83800F34C79 /* AppDelegate.swift */,
 				9CA9EA0D20BCC83800F34C79 /* ReaderController.swift */,
 				9CFB461520D1B37A000FD752 /* TableViewController.swift */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C1718B220D6B82900B08743 /* File.swift in Sources */,
 				9CA9EA0E20BCC83800F34C79 /* ReaderController.swift in Sources */,
 				9CFB461620D1B37A000FD752 /* TableViewController.swift in Sources */,
 				9CC13F0020D4403B008A389F /* Table2ViewController.swift in Sources */,

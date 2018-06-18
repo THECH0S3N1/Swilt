@@ -103,9 +103,9 @@
 		9CA9EA0820BCC83800F34C79 /* Swilt */ = {
 			isa = PBXGroup;
 			children = (
-				9C1718B120D6B82900B08743 /* File.swift */,
 				9CA9EA0920BCC83800F34C79 /* AppDelegate.swift */,
 				9CA9EA0D20BCC83800F34C79 /* ReaderController.swift */,
+				9C1718B120D6B82900B08743 /* File.swift */,
 				9CFB461520D1B37A000FD752 /* TableViewController.swift */,
 				9CC13EFF20D4403B008A389F /* Table2ViewController.swift */,
 				9CA9EA0F20BCC83800F34C79 /* Main.storyboard */,

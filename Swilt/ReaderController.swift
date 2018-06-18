@@ -19,7 +19,11 @@ class SecondViewController: UIViewController {
     var down_timestamp = 0.0
     var motionManager = CMMotionManager()
     var i = 0
-
+    var counterScrolls = 0
+    var counterScrolls2 = 0
+    var counterScrollsStr = ""
+    var counterScrolls2Str = ""
+    
     @IBOutlet weak var startTimerButton: UIButton!
     @IBOutlet weak var readingTimer: UIButton!
     @IBOutlet weak var ScrollButton: UIButton!
@@ -105,14 +109,16 @@ class SecondViewController: UIViewController {
     @IBAction func readingButton(_ sender: UIButton) {
         endTimestamp = Double(NSDate().timeIntervalSince1970)
         result = String(format: "%.2f",(endTimestamp-startTimestamp))
-        stories[myIndex] = stories[myIndex] + "  " + result
+        counterScrollsStr = String(counterScrolls)
+        counterScrolls2Str = String(counterScrolls2)
+        stories[myIndex] = stories[myIndex] + "  " + result + "  " + counterScrollsStr + "  " + counterScrolls2Str
 
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let maxHeight = Int(Tview.frame.size.height)
         Tview.isUserInteractionEnabled = false
         readingTimer.isUserInteractionEnabled = false
         readingTimer.alpha = 0.5
@@ -121,14 +127,14 @@ class SecondViewController: UIViewController {
         animateIn()
         Tview.isUserInteractionEnabled = true
         Tview.isScrollEnabled = true
-        let rec = CGRect(x: 0, y: 0, width: Sview.frame.size.width, height: Sview.frame.size.height)
-        Sview.scrollRectToVisible(rec, animated: true)
-        Tview.contentSize = CGSize(width: Tview.frame.size.width, height: CGFloat(i+50))
+        let rec = CGRect(x: 0, y: 0, width: Tview.frame.size.width, height: Tview.frame.size.height)
+        Tview.scrollRectToVisible(rec, animated: true)
+        Tview.contentSize = CGSize(width: Tview.frame.size.width, height: Tview.frame.size.height)
         motionManager.gyroUpdateInterval = 0.1
         motionManager.startGyroUpdates(to: OperationQueue.current!){ (data, error) in
                 if let myData = data{
                     if myData.rotationRate.x > 1.2{
-                    self.scrollDown()
+                        self.scrollDown(maxHeight: maxHeight)
                    
                     } else if myData.rotationRate.x < -1.8{
                     self.scrollUp()
@@ -142,14 +148,17 @@ class SecondViewController: UIViewController {
         Tview.scrollRangeToVisible(NSMakeRange(0, 0))
     }
     
-    func scrollDown(){
-        let maxHeight:Int = Int(Tview.frame.size.height)
+    func scrollDown(maxHeight: Int){
+        
         let new_down_timestamp = NSDate().timeIntervalSince1970
         if (new_down_timestamp - up_timestamp) > 0.8{
             down_timestamp = new_down_timestamp
             if i < maxHeight {
-                i += 250
+                i += 50
+                counterScrolls += 1
             }
+            print (maxHeight)
+            print (i)
             let rec = CGRect(x: 0, y: CGFloat(i), width: Tview.frame.size.width, height: Tview.frame.size.height)
             Tview.scrollRectToVisible(rec, animated: true)
         }
@@ -162,7 +171,8 @@ class SecondViewController: UIViewController {
         if(new_up_timestamp - down_timestamp) > 0.8{
             up_timestamp = new_up_timestamp
             if i > minHeight{
-                i -= 250
+                i -= 50
+                counterScrolls2 -= 1
             }
             let rec = CGRect(x: 0, y: CGFloat(i), width: Tview.frame.size.width, height: Tview.frame.size.height)
             Tview.scrollRectToVisible(rec, animated: true)
